@@ -2,8 +2,6 @@
 
 ![Guessing Game](https://i.ibb.co/7CQFJ1T/sample.png)
 
-Check out the [demo](https://guessing-game-in-express.netlify.app/) here.
-
 ## Preview
 
 This is a simple web application that combines frontend technologies (HTML, CSS, JavaScript) with a Node.js backend using Express. The game logic involves guessing a number within a specified range, and the results are saved to a file on the server.
