@@ -2,7 +2,7 @@
 
 ![Guessing Game](https://i.ibb.co/7CQFJ1T/sample.png)
 
-Check out the [demo](https://nenorvalls-guessing-game.netlify.app/) here.
+Check out the [demo](https://guessing-game-in-express.netlify.app/) here.
 
 ## Preview
 
