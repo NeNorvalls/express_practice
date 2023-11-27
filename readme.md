@@ -2,22 +2,24 @@
 
 ![Guessing Game](https://i.ibb.co/7CQFJ1T/sample.png)
 
-## Preview
+## Overview
 
-This is a simple web application that combines frontend technologies (HTML, CSS, JavaScript) with a Node.js backend using Express. The game logic involves guessing a number within a specified range, and the results are saved to a file on the server.
+This project is a simple web application that integrates frontend technologies (HTML, CSS, JavaScript) with a Node.js backend using Express. The game involves guessing a number within a specified range, and the results are saved to a file on the server.
 
-## Frontend (HTML, CSS, JavaScript)
+## Frontend (HTML, CSS, JavaScript) with Bootstrap v5
 
-- **HTML:** The structure of the webpage is defined using HTML.
-- **CSS:** Custom styling for the game interface is defined in the `styles.css` file.
+- **HTML:** Defines the structure of the webpage.
+- **CSS:** Custom styling for the game interface is provided in the `styles.css` file, enhanced by Bootstrap v5.
 - **JavaScript:** The game logic is implemented using JavaScript in the `script.js` file.
 
-## Styling (`styles.css`)
+## Styling (`styles.css`) with Bootstrap v5
 
-- Custom styling for the game interface is defined in the `styles.css` file.
+- Custom styling for the game interface is defined in the `styles.css` file, complemented by Bootstrap v5 for a responsive and modern design.
 - The `body` element has a background color of `#f0f0f0`.
 - The game container has a maximum width of `450px`, a background color of `#8b0000`, border radius of `10px`, and is centered on the page.
-- The primary button has a background color of `#ffc107`, bold white text, and no border.
+- The primary button has a Bootstrap class (`btn btn-primary`) for styling (`background-color: #ffc107;`, `color: #8b0000;`).
+- The game interface benefits from Bootstrap's utility classes for spacing (`mt-3`, `mb-3`) and text alignment (`text-center`).
+- Responsive design is enhanced using Bootstrap's grid system.
 
 ## Media Queries
 
@@ -35,3 +37,23 @@ This is a simple web application that combines frontend technologies (HTML, CSS,
 
 - The game result is saved asynchronously using an AJAX request to the "/saveGameResult" endpoint.
 - The AJAX request is handled using jQuery.
+
+## Backend (Node.js with Express)
+
+- The backend is built with Node.js and uses the Express framework.
+- The server listens on port 3000.
+- The `express.static` middleware serves static files from the "public" directory.
+- The `/saveGameResult` endpoint receives a POST request with the game result, appends it to the "game_results.txt" file, and sends a response.
+- The home route ("/") serves the main HTML file.
+
+## Dependencies
+
+- [Express](https://www.npmjs.com/package/express): A fast, unopinionated, minimalist web framework for Node.js.
+- [body-parser](https://www.npmjs.com/package/body-parser): Middleware to parse incoming request bodies.
+
+## Getting Started
+
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the server with `node server.js`.
+4. Access the application at [http://localhost:3000](http://localhost:3000).
