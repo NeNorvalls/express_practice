@@ -39,7 +39,7 @@ label {
 .btn-primary {
   background-color: #ffc107 !important;
   border: none !important;
-  color: #8b0000;
+  color: #8b0000 !important;
   font-weight: bold;
   letter-spacing: 2px;
 }

@@ -1,23 +1,35 @@
 let attempts = 0;
 const minNumber = 1;
 const maxNumber = 100;
-const secretNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+let secretNumber = generateRandomNumber();
+
+function generateRandomNumber() {
+  return Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+}
 
 function playGame() {
   var guessInput = document.getElementById("guessInput");
   var guess = guessInput.value;
 
   if (isValidGuess(guess)) {
-    attempts++;
     var guessNumber = parseInt(guess);
 
     if (guessNumber === secretNumber) {
-      displayResult("Congratulations! You guessed the number in " + attempts + " attempts");
+      alert(
+        "Congratulations! You guessed the number in " + attempts + " attempts"
+      );
       saveGameResult("Player won in " + attempts + " attempts.");
-    } else if (guessNumber < secretNumber) {
-      displayResult("Try higher");
+
+      attempts = 0;
+      secretNumber = generateRandomNumber();
+      displayResult("New number generated. Start guessing!");
     } else {
-      displayResult("Try lower");
+      attempts++;
+      if (guessNumber < secretNumber) {
+        displayResult("Try higher");
+      } else {
+        displayResult("Try lower");
+      }
     }
   } else {
     displayResult("Please enter a valid number within the specified range.");
